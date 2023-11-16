@@ -1,8 +1,9 @@
+import Upload from "../../Components/Upload/Upload";
 
 const UploadImage = () => {
     return (
         <div>
-            <h1>upload your image here</h1>
+          <Upload/> 
         </div>
     )
 }
