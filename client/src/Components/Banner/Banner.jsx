@@ -9,7 +9,7 @@ const Banner = () => {
             <div>
                 <div className="flex flex-col md:flex-row">
                     <div className="flex-1 md:w-1/2">
-                        <img src={AadharPromo} alt="Aadhar" className="h-full w-full object-cover" />
+                        <img src={AadharPromo} alt="AadharPromo" className="h-full w-full object-cover" />
                     </div>
                     <div className="flex-1 p-10 flex flex-col justify-center items-center md:items-start md:w-1/2">
                         <div className="mb-8 text-center md:text-left">
