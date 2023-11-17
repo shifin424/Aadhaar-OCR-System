@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}))
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 app.use('/api/v1',userRouter)
-// app.use(errorHandler)
+app.use(errorHandler)
 
 app.use((req,res)=>{
     res.status(400).json({success:false , status:404 ,message:'Not Found'})

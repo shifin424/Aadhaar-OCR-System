@@ -1,17 +1,26 @@
 import multer from 'multer';
+import ErrorResponse from '../errors/errorHandler.js';
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    console.log(file, 'file is reading');
-    cb(null, './uploads/');
-  },
   filename: (req, file, cb) => {
-    console.log(file, 'in filename');
-    console.log(file.originalname, 'in filename');
     cb(null, file.originalname);
   },
 });
 
-const upload = multer({ storage: storage, array: true });
+const fileFilter = (req, file, cb) => {
+  const allowedFormats = ['image/png', 'image/jpeg', 'image/jpg'];
+
+  if (allowedFormats.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(new ErrorResponse(400, 'Invalid file format. Only PNG, JPEG, and JPG formats are allowed.'), false);
+  }
+};
+
+const upload = multer({
+  storage: storage,
+  array: true,
+  fileFilter: fileFilter,
+});
 
 export default upload;

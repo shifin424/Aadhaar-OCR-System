@@ -9,7 +9,7 @@ function App() {
       <Theme />
       <Router>
         <Routes>
-          <Route path='/*' element={ <UserRoutes />} />
+          <Route path='/*' element={<UserRoutes />} />
         </Routes>
       </Router>
     </div>

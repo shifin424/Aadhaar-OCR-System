@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 const Banner = () => {
     return (
         <div>
-
             <div>
                 <div className="flex flex-col md:flex-row">
                     <div className="flex-1 md:w-1/2">
@@ -25,7 +24,6 @@ const Banner = () => {
                         </div>
                         <div className="mb-4 md:mb-0 space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">
                             <Link to="/upload-image" >  <Button
-                                // onClick={openModal}
                                 className="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-500 transition w-full md:w-full"
                                 text="Explore"
                             />
@@ -34,8 +32,6 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

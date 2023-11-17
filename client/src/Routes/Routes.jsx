@@ -9,7 +9,7 @@ const UserRoutes = () => {
         <div>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/upload-image" element={<UploadImage/>} />
+                <Route path="/upload-image" element={<UploadImage />} />
             </Routes>
         </div>
     )

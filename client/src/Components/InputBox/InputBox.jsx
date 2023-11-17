@@ -1,8 +1,8 @@
 
-const InputBox = ({ className, id, type, onChange }) => {
+const InputBox = ({ className, id, type, onChange, value }) => {
     return (
         <div>
-           <input id={id} className={className} type={type} onChange={onChange}/>
+            <input id={id} className={className} value={value} type={type} onChange={onChange} />
         </div>
     )
 }
