@@ -69,62 +69,54 @@ const Upload = () => {
 
     return (
         <div className="flex flex-col lg:flex-row sm:h-[50rem] md:my-auto">
-            <div className="flex-1 bg-gray-300">
-                <div className="bg-gray-100 text-black h-full flex flex-col pb-5 justify-around">
-                    <h5 className="ml-14 font-sans font-bold">Aadhaar Front</h5>
-                    <div className="bg-gray-600  h-52 w-[40rem] ml-14 rounded-full">
+            <div className="bg-gray-300 w-full md:w-[60rem]">
+                <div className="bg-gray-100 text-black h-full flex flex-col p-5 justify-around">
+                    <h5 className="font-sans font-bold text-center mb-4">Aadhaar Front</h5>
+                    <div className="bg-gray-600 h-52 w-full mb-4 rounded-full">
                         <div className={`flex items-center justify-center w-full rounded-md ${frontFile ? 'bg-gray-800' : ''}`}>
                             <label
                                 htmlFor="front-file"
                                 className={`flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-none rounded-lg shadow-lg cursor-pointer ${frontFile ? 'bg-gray-800' : 'bg-white'} hover:bg-gray-800`}
                             >
                                 {frontFile ? (
-                                    <>
-                                        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                            {frontFile && <img className="mt-1 h-[15rem] " src={URL.createObjectURL(frontFile)} alt="Front Aadhaar" />}
-                                        </div>
-                                    </>
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        {frontFile && <img className="mt-1 h-[15rem]" src={URL.createObjectURL(frontFile)} alt="Front Aadhaar" />}
+                                    </div>
                                 ) : (
-                                    <>
-                                        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                            <svg className="w-8 h-8 mb-4 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                            </svg>
-                                            <p className="mb-2 text-sm text-blue-500">
-                                                <span className="font-semibold">Click here to Upload /</span> Capture
-                                            </p>
-                                        </div>
-                                    </>
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                        </svg>
+                                        <p className="mb-2 text-sm text-blue-500">
+                                            <span className="font-semibold">Click here to Upload /</span> Capture
+                                        </p>
+                                    </div>
                                 )}
                                 <InputBox id="front-file" name="uploads" className="hidden" type="file" onChange={handleFrontFileChange} />
                             </label>
                         </div>
                     </div>
 
-                    <h5 className="ml-14 mt-14 font-sans font-bold">Aadhaar Back</h5>
-                    <div className="bg-gray-600  h-52 w-[40rem] ml-14 rounded-full">
+                    <h5 className="font-sans font-bold text-center mb-4 mt-4">Aadhaar Back</h5>
+                    <div className="bg-gray-600 h-52 w-full mb-4 rounded-full">
                         <div className={`flex items-center justify-center w-full rounded-md ${backFile ? 'bg-gray-800' : ''}`}>
                             <label
                                 htmlFor="back-file"
                                 className={`flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-none rounded-lg shadow-lg cursor-pointer ${backFile ? 'bg-gray-800' : 'bg-white'} hover:bg-gray-800`}
                             >
                                 {backFile ? (
-                                    <>
-                                        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                            {backFile && <img className="mt-1 h-[15rem] w-" src={URL.createObjectURL(backFile)} alt="Front Aadhaar" />}
-                                        </div>
-                                    </>
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        {backFile && <img className="mt-1 h-[15rem] w-" src={URL.createObjectURL(backFile)} alt="Front Aadhaar" />}
+                                    </div>
                                 ) : (
-                                    <>
-                                        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                            <svg className="w-8 h-8 mb-4 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                            </svg>
-                                            <p className="mb-2 text-sm text-blue-500">
-                                                <span className="font-semibold">Click here to Upload /</span> Capture
-                                            </p>
-                                        </div>
-                                    </>
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                        </svg>
+                                        <p className="mb-2 text-sm text-blue-500">
+                                            <span className="font-semibold">Click here to Upload /</span> Capture
+                                        </p>
+                                    </div>
                                 )}
                                 <InputBox id="back-file" name="uploads" className="hidden" type="file" onChange={handleBackFileChange} />
                             </label>
@@ -134,11 +126,13 @@ const Upload = () => {
                         <Button
                             onClick={loading ? null : handleUpload}
                             text={loading ? "Processing..." : "PARSE AADHAAR"}
-                            className={`bg-blue-500 text-white mt-14 px-16 py-3 rounded-md ${loading ? 'cursor-not-allowed' : ''}`}
+                            className={`bg-blue-500 text-white mt-4 px-8 py-2 rounded-md ${loading ? 'cursor-not-allowed' : ''}`}
                         />
                     </div>
                 </div>
             </div>
+
+
 
 
             <div className="flex-1 bg-gray-300">
@@ -205,10 +199,11 @@ const Upload = () => {
                             <>
                                 <div className="mr-10">
                                     <h1 className="font-semibold ml-10 pt-8">API Response</h1>
-                                    <div className="bg-gray-200 h-28 mt-8 rounded-md ml-10 w-[43rem]">
-                                        <p className="ml-8 pt-5">'Start Performing OCR Inputting Your Aadhaar front and back'</p>
+                                    <div className="bg-gray-200 h-28 mt-8 rounded-md ml-10 sm:w-full md:w-[43rem]">
+                                        <p className="ml-8 pt-5">Start Performing OCR Inputting Your Aadhaar front and back</p>
                                     </div>
                                 </div>
+
                             </>
                         )}
                     </div>
