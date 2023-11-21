@@ -99,11 +99,15 @@ Run the following command to install nodemon globally. This will help with serve
 
 ## Conclusion
 
-AadhaarScan is an innovative web application that seamlessly extracts Aadhaar card information from images, offering a user-friendly experience. Developed with the powerful MERN (MongoDB, Express.js, React, Node.js) stack, the project combines cutting-edge technologies to deliver efficient parsing functionality.
+"AadhaarScan is an innovative web application that seamlessly extracts Aadhaar card information from images, offering a user-friendly experience. Developed with the powerful MERN (MongoDB, Express.js, React, Node.js) stack, the project combines cutting-edge technologies to deliver efficient parsing functionality.
 
 Feel free to explore and contribute to the project, making Aadhaar information extraction a smoother process for users. If you encounter any issues or have suggestions, please check out the contribution guidelines.
 
 Thank you for choosing AadhaarScan!
+
+You can access the live version of AadhaarScan [here](https://aadhaarscan.netlify.app).
+
+
 
 
 

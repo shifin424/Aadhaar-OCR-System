@@ -14,7 +14,7 @@ app.use(
       origin: ['https://aadhaarscan.netlify.app']
     })
   );
-  
+
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
@@ -23,9 +23,6 @@ app.use(morgan("dev"));
 app.use('/api/v1',userRouter)
 app.use(errorHandler)
 
-app.use((req,res)=>{
-    res.status(400).json({success:false , status:404 ,message:'Not Found'})
-})
 
 const port =  process.env.PORT || 3000
 
