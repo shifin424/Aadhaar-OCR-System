@@ -2,13 +2,19 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config()
 import morgan from 'morgan';
-import cors from './middlewares/security/cors.js';
+import cors from 'cors';
 import userRouter from './routes/userRouter.js';
 import errorHandler from './middlewares/errors/errorHandler.js';
 
 const app = express()
 
-app.use(cors)
+app.use(
+    cors({
+      credentials: true,
+      origin: ['https://aadhaarscan.netlify.app']
+    })
+  );
+  
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
